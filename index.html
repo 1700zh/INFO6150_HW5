@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza Registration</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2>Free pizzzzzza!!!</h2>
+    <form id="registrationForm">
+        <label for="name">Name (at least 3 characters):</label>
+        <input type="text" id="name" name="name" required>
+        <span class="error" id="nameError"></span>
+
+        <label for="birthYear">Year of Birth (greater than 1900 & before current year):</label>
+        <input type="number" id="birthYear" name="birthYear" required>
+        <span class="error" id="birthYearError"></span>
+
+        <label>
+            <input type="checkbox" id="liveInUS">
+            Do you live in the United States?
+        </label>
+
+        <div id="zipcodeContainer" class="hidden">
+            <label for="zipcode">Zipcode (5 digits):</label>
+            <input type="text" id="zipcode" name="zipcode">
+            <span class="error" id="zipcodeError"></span>
+        </div>
+
+        <label for="password">Password (at least 8 characters):</label>
+        <input type="password" id="password" name="password" required>
+        <span class="error" id="passwordError"></span>
+
+        <label>Preferred type of pizza:</label>
+        <div class="radio-group">
+            <label><input type="radio" name="pizzaType" value="With pineapple"> With pineapple</label>
+            <label><input type="radio" name="pizzaType" value="Without pineapple"> Without pineapple</label>
+            <label><input type="radio" name="pizzaType" value="I do not like pizza"> I do not like pizza</label>
+        </div>
+        <span class="error" id="pizzaTypeError"></span>
+
+        <button type="submit">Submit</button>
+    </form>
+    <p id="successMessage" class="success hidden">Accepted! Your pizza is on the way!</p>
+
+    <script src="script.js"></script>
+</body>
+</html>
